@@ -10,6 +10,16 @@ angular.module('orangeWalrus.factories', [])
     },
     getActivity: function(activity_id) {
       return $http({ method: 'GET', url: 'api/activity/' + activity_id });
+    },
+    updateActivity: function(activity) {
+      return $http({ 
+        method: 'PUT',
+        url: 'api/activity/' + activity._id,
+        data: activity
+      })
+    },
+    deleteActivity: function(activity_id) {
+      return $http({ method: 'DELETE', url: 'api/activity/' + activity_id });
     }
   };
 });

@@ -1,12 +1,11 @@
 var app = angular.module('orangeWalrus', [
   'orangeWalrus.factories',
   'orangeWalrus.activities',
-  'orangeWalrus.activity',
   'ui.router'
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/activities');
 
   $stateProvider
     .state('activities', {
@@ -18,6 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/activity/:activity_id",
       templateUrl: "/app/activities/activity.html",
       controller: 'ActivityController'
+    })
+    .state('newActivity', {
+      url: '/activities/new',
+      templateUrl: '/app/activities/activity.html',
+      controller: 'NewActivityController'
     });
 
 });

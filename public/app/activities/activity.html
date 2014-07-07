@@ -1,1 +1,3 @@
-<h1>{{ activity.name }}</h1>
+<h1 ng-click="clicked('name')" class="nameOwActivity">{{ activity.name }}</h1>
+<button ng-click="clicked('name')">Edit</button>
+<button ng-click="deleteActivity()">Delete</button>

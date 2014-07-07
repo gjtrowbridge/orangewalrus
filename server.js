@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 // BASIC SETUP
 // ===========
 
-var mongooseConnectionURL = process.env.CONNECT || 'mongodb://localhost/ow'
+var mongooseConnectionURL = process.env.CUSTOMCONNSTR_MONGOLAB_URI || 'mongodb://localhost/ow'
 mongoose.connect(mongooseConnectionURL)
 
 //Defines port for azure deploy (and local deploy)

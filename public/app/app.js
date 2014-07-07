@@ -1,6 +1,7 @@
 var app = angular.module('orangeWalrus', [
   'orangeWalrus.factories',
   'orangeWalrus.activities',
+  'orangeWalrus.activity',
   'ui.router'
 ]);
 
@@ -15,7 +16,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('activity', {
       url: "/activity",
-      templateUrl: "/app/activities/activity.html"
+      templateUrl: "/app/activities/activity.html",
+      controller: 'ActivityController'
     });
 
 });

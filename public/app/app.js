@@ -10,7 +10,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('activities', {
       url: "/activities",
-      templateUrl: 'app/activities/activities.html'
+      templateUrl: 'app/activities/activities.html',
+      controller: 'ActivitiesController'
     })
     .state('activity', {
       url: "/activity",

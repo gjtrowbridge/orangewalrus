@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var Activity = require('./app/models/activity');
 
 // BASIC SETUP
 // ===========
@@ -14,7 +15,6 @@ var port = process.env.port || 8080;
 
 //Parses incoming form data onto request.body
 app.use(bodyParser.urlencoded({ extended: true }));
-
 
 
 // STATIC FILE SERVING
@@ -30,6 +30,45 @@ var router = express.Router();
 router.get('/', function(req, res) {
   res.json({ message: 'Welcome to the orange walrus API!' });
 });
+
+router.route('/activities')
+  
+  //Handles querying of all activities
+  .get(function(req, res) {
+    Activity.find(function(err, activities) {
+      //Return errors if necessary
+      if (err) {
+        res.send(err);
+        return;
+      }
+
+      //Return array of activity objects (JSON format)
+      res.json(activities);
+      
+    });
+  })
+
+  //Handles creation of new activities
+  .post(function(req, res) {
+
+    //Create activity
+    var activity = new Activity();
+    activity.name = req.body.name;
+
+    //Save activity
+    activity.save(function(err, activity) {
+      //Return errors if necessary
+      if (err) {
+        res.send(err);
+        return;
+      }
+
+      //Return success if succeeds
+      res.json({ message: 'Activity created: ' + activity.id });
+    });
+
+  });
+
 
 // REGISTER ROUTES
 // ===============

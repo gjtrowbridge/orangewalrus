@@ -1,4 +1,8 @@
-var app = angular.module('orangeWalrus', ['ui.router']);
+var app = angular.module('orangeWalrus', [
+  'orangeWalrus.factories',
+  'orangeWalrus.activities',
+  'ui.router'
+]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');

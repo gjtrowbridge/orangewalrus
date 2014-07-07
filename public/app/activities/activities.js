@@ -43,7 +43,11 @@ angular.module('orangeWalrus.activities', [])
 .controller('NewActivityController', function($scope, Activities) {
   $scope.activity = {};
   $scope.addActivity = function() {
-
+    Activities.addActivity($scope.activity).then(function(response) {
+      console.log('Activity added');
+    }).catch(function(err) {
+      console.log(err);
+    });
   }
 })
 

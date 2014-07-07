@@ -1,5 +1,8 @@
 <form novalidate ng-submit="addActivity()" name="ActivityForm">
-  <input name="name" required placeholder="Baseball" />
-  <input name="description" placeholder="America's favorite pasttime" />
+  <label for="activityName">Name:</label>
+  <input ng-model="activity.name" id="activityName" name="name" required placeholder="Baseball" />
+
+  <label for="activityDescription">Description:</label>
+  <input ng-model="activity.description" id="activityDescription" name="description" placeholder="America's favorite pastime" />
   <input type="submit" ng-disabled="ActivityForm.$invalid">
 </form>

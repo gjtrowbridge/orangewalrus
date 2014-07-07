@@ -15,7 +15,7 @@ var port = process.env.port || 8080;
 
 //Parses incoming form data onto request.body
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(bodyParser.json());
 
 // STATIC FILE SERVING
 // ===================

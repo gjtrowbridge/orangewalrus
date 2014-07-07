@@ -72,14 +72,25 @@ router.route('/activity/:activity_id')
         }
 
         //Return message on success
-        res.json({ message: 'Activity updated: ' + activity.id });
+        res.json({ message: 'Activity updated: ' + activity._id });
       });
     });
   })
 
-  // .delete(function(req, res) {
+  .delete(function(req, res) {
+    Activity.remove({
+      _id: req.params.activity_id
+    }, function(err, activity) {
+      //Return errors if necessary
+      if (err) {
+        res.send(err);
+        return;
+      }
 
-  // });
+      //Return message on success
+      res.json({ message: 'Successfully deleted' });
+    });
+  });
 
 //Handles interactions at /api/activities
 router.route('/activities')
@@ -96,7 +107,6 @@ router.route('/activities')
 
       //Return array of activity objects (JSON format)
       res.json(activities);
-
     });
   })
 
@@ -115,8 +125,8 @@ router.route('/activities')
         return;
       }
 
-      //Return success if succeeds
-      res.json({ message: 'Activity created: ' + activity.id });
+      //Return message on success
+      res.json({ message: 'Activity created: ' + activity._id });
     });
 
   });

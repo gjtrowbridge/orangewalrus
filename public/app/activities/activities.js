@@ -10,4 +10,11 @@ angular.module('orangeWalrus.activities', [])
   }).catch(function(err) {
     console.log(err);
   });
-});
+})
+
+.directive('ngActivityLink', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/app/activities/activityLink.html'
+  }
+})

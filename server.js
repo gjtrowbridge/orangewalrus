@@ -31,11 +31,63 @@ router.get('/', function(req, res) {
   res.json({ message: 'Welcome to the orange walrus API!' });
 });
 
+//Handles interactions for single activities
+router.route('/activity/:activity_id')
+
+  .get(function(req, res) {
+    //Find activity
+    Activity.findById(req.params.activity_id, function(err, activity) {
+      
+      //Return errors if necessary
+      if (err) {
+        res.send(err);
+        return;
+      }
+
+      //Else returns activity object (JSON)
+      res.json(activity);
+    });
+  })
+
+  .put(function(req, res) {
+    //Find activity
+    Activity.findById(req.params.activity_id, function(err, activity) {
+
+      //Return errors if necessary
+      if (err) {
+        res.send(err);
+        return;
+      }
+
+      //Else update activity name
+      activity.name = req.body.name;
+
+      //Save activity
+      activity.save(function(err) {
+
+        //Return errors if necessary
+        if (err) {
+          res.send(err);
+          return;
+        }
+
+        //Return message on success
+        res.json({ message: 'Activity updated: ' + activity.id });
+      });
+    });
+  })
+
+  // .delete(function(req, res) {
+
+  // });
+
+//Handles interactions at /api/activities
 router.route('/activities')
   
   //Handles querying of all activities
   .get(function(req, res) {
     Activity.find(function(err, activities) {
+      
       //Return errors if necessary
       if (err) {
         res.send(err);
@@ -44,7 +96,7 @@ router.route('/activities')
 
       //Return array of activity objects (JSON format)
       res.json(activities);
-      
+
     });
   })
 

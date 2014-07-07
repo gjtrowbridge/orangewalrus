@@ -15,7 +15,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'ActivitiesController'
     })
     .state('activity', {
-      url: "/activity",
+      url: "/activity/:activity_id",
       templateUrl: "/app/activities/activity.html",
       controller: 'ActivityController'
     });

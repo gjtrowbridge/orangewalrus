@@ -11,8 +11,9 @@
   </head>
   <body>
     <div class="container">
+      
       <nav role="navigation" class="navbar">
-        <a ui-sref="listActivities" class="navbar-brand logo"><span class="alternate">orange</span><span>walrus</span></a>
+        <a ui-sref="listActivities" class="navbar-brand logo"><img src="./assets/ow_bg.png" alt="logo" class="logo"></img><span class="alternate">orange</span><span>walrus</span></a>
         <ul class="nav navbar-nav navbar-right">
           <li class="alternate"><a ui-sref="listActivities">Browse Activities</a></li>
           <li><a ui-sref="newActivity">Add Activity</a></li>
@@ -21,6 +22,8 @@
       <div ui-view></div>
     </div>
 
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
     <script src="./lib/angular/angular.min.js"></script>
     <script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 

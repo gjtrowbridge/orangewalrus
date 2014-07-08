@@ -1,21 +1,44 @@
-<form novalidate ng-submit="saveActivity()" name="ActivityForm">
-  <label for="activityName">Name:</label>
-  <input class="activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
+<form class="activity" novalidate ng-submit="saveActivity()" name="ActivityForm">
 
-  <label for="activityOrganization">Organization:</label>
-  <input class="activityOrganization" ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
+  <section class="activityHeader">
+    <img src="./assets/ow_bg.png" alt="Activity Image" />
+    <div class="activitySummary">
+      <label for="activityName">Name:</label>
+      <input class="activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
 
-  <label for="activityDescription">Description:</label>
-  <input class="activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
+      <label for="activityOrganization">Organization:</label>
+      <input class="activityOrganization" ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
 
-  <label for="activityLocation">Location:</label>
-  <input class="activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
+    </div>
+  </section>
 
-  <label for="activityCost">Cost:</label>
-  <input class="activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
+  <section class="activityBody">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active" role="tab"><a>Basics</a></li>
+      <li class="alternate" role="tab"><a>More Info</a></li>
+      <li role="tab"><a>User Ratings</a></li>
+    </ul>
+    <section class="activityMain">
+      <div class="activityMain">
+        <label for="activityDescription">Description:</label>
+        <input class="activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
 
-  <label for="activityLinks">Links:</label>
-  <input class="activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
+        <label for="activityLocation">Location:</label>
+        <input class="activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
 
-  <input type="submit" ng-disabled="ActivityForm.$invalid">
+        <label for="activityCost">Cost:</label>
+        <input class="activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
+
+        <label for="activityLinks">Links:</label>
+        <input class="activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
+      </div>
+      <div class="activityTags">
+        <label for="activityTag">Tags:</label>
+        <input id="activityTag" class="activityTag" ng-model="tag" placeholder="Sports" />
+        <button>Add Tag</button>
+      </div>
+    </section>
+  </section>
+
+  <input type="submit" ng-disabled="ActivityForm.$invalid" value="Save"></input>
 </form>

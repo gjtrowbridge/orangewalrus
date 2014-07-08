@@ -1,3 +1,66 @@
+/* ACTIVITY FORM (Create, Edit) */
+form.activity {
+  margin-top: 4em;
+}
+form.activity input {
+  margin-bottom: 0.5em;
+}
+form.activity input[type="submit"] {
+  color: #ffffff;
+  background-color: #2571f5;
+  border-radius: 0.5em;
+  font-size: 3em;
+  display: block;
+  margin: auto;
+}
+form.activity input[type="submit"]:hover {
+  background-color: #0a57dd;
+}
+form.activity input[type="submit"]:disabled {
+  background-color: #808080;
+}
+form.activity label {
+  font-size: 1.5em;
+  width: 40%;
+}
+form.activity section {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+form.activity section.activityHeader {
+  font-size: 1.3em;
+  height: 9em;
+}
+form.activity section.activityHeader input {
+  width: 50%;
+  display: inline;
+}
+form.activity section.activityHeader img,
+form.activity section.activityHeader div {
+  float: left;
+}
+form.activity section.activityHeader img {
+  height: 8em;
+  margin-right: 1em;
+}
+form.activity section.activityBody {
+  height: 32em;
+}
+form.activity section.activityBody input {
+  display: block;
+  width: 100%;
+  height: 4em;
+}
+form.activity section.activityBody div.activityMain {
+  width: 60%;
+  float: left;
+}
+form.activity section.activityBody div.activityTags {
+  float: right;
+  width: 30%;
+}
+/* LINKS, LOGO, NAV BAR */
 a:hover {
   color: #0a57dd;
   text-decoration: none;
@@ -10,38 +73,55 @@ a.logo {
   font-family: "Comic Sans MS";
   font-weight: bold;
 }
-a.logo:hover span:first-child {
+a.logo:hover span.alternate {
   color: #dd900a;
 }
-a.logo span:first-child {
+a.logo span.alternate {
   color: #f5a925;
+}
+img.logo {
+  height: 0.7em;
+  margin-right: 0.2em;
+  display: none;
 }
 nav.navbar ul.nav {
   font-size: 1.5em;
 }
 nav.navbar ul.nav li {
-  border: #000000 solid 0.1em;
-  border-radius: 0.5em;
   margin-left: 0.5em;
   color: inherit;
 }
 nav.navbar ul.nav li a {
+  border: #2571f5 solid 0.2em;
+  border-radius: 0.5em;
   background-color: #2571f5;
   color: #ffffff;
 }
 nav.navbar ul.nav li a:hover {
   background-color: #0a57dd;
+  border-color: #0a57dd;
 }
 nav.navbar ul.nav li.alternate a {
+  border-color: #f5a925;
   background-color: #f5a925;
   color: #000000;
 }
 nav.navbar ul.nav li.alternate a:hover {
   background-color: #dd900a;
+  border-color: #dd900a;
+}
+/* GENERAL */
+a.alternate {
+  border-color: #f5a925;
+  background-color: #f5a925;
+  color: #000000;
+}
+a.alternate:hover {
+  background-color: #dd900a;
+  border-color: #dd900a;
 }
 body {
   color: black;
   font-family: "Comic Sans MS";
-  /*font-family: "Brush Script MT", cursive, sans-serif;*/
   margin-top: 3em;
 }

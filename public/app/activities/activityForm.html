@@ -1,49 +1,53 @@
 <form class="activity" novalidate ng-submit="saveActivity()" name="ActivityForm">
 
-  <section class="activityHeader">
-    <img src="./assets/ow_bg.png" alt="Activity Image" />
-    <div class="activitySummary">
-      <label class="activityLabel" for="activityName">Name:</label>
-      <input class="activityData activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
+  <section class="activityHeader row">
+    <div class="col-md-3">
+      <img src="./assets/ow_bg.png" alt="Activity Image" />
+    </div>
+    <div class="col-md-8 activitySummary">
+      <div>
+        <label class="activityLabel" for="activityName">Name:</label>
+        <input class="activityData activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
+      </div>
 
-      <label class="activityLabel" for="activityOrganization">Organization:</label>
-      <input class="activityData activityOrganization" ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
-
+      <div>
+        <label class="activityLabel" for="activityOrganization">Organization:</label>
+        <input class="activityData activityOrganization" required ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
+      </div>
     </div>
   </section>
 
-  <section class="activityBody">
+  <section class="activityBody row">
     <ul class="nav nav-tabs" role="tablist">
       <li class="active" role="tab"><a>Basics</a></li>
       <li class="alternate" role="tab"><a>More Info</a></li>
       <li role="tab"><a>User Ratings</a></li>
     </ul>
-    <section class="activityMain">
-      <div class="activityMain">
-        <label class="activityLabel" for="activityDescription">Description:</label>
-        <textarea class="activityData activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
+    <section class="activityMain col col-md-6">
+      <label class="activityLabel" for="activityDescription">Description:</label>
+      <textarea class="activityData activityDescription" required ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!"></textarea>
 
-        <label class="activityLabel" for="activityLocation">Location:</label>
-        <textarea class="activityData activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
+      <label class="activityLabel" for="activityLocation">Location:</label>
+      <textarea class="activityData activityLocation" required ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA"></textarea>
 
-        <label class="activityLabel" for="activityCost">Cost:</label>
-        <textarea class="activityData activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
+      <label class="activityLabel" for="activityCost">Cost:</label>
+      <textarea class="activityData activityCost" required ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season"></textarea>
 
-        <label class="activityLabel" for="activitySchedule">Schedule:</label>
-        <textarea class="activityData activitySchedule" ng-model="activity.schedule" id="activitySchedule" name="schedule" placeholder="www.5v5soccerinfofoundhere.com" />
-        
-        <label class="activityLabel" for="activityLinks">Links:</label>
-        <textarea class="activityData activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
+      <label class="activityLabel" for="activitySchedule">Schedule:</label>
+      <textarea class="activityData activitySchedule" required ng-model="activity.schedule" id="activitySchedule" name="schedule" placeholder="Every Tuesday Night from 7-8 PM"></textarea>
 
-      </div>
-      <div class="activityTags">
-        <label class="activityLabel" for="activityTag">Tags:</label>
-        <button type="button" ng-click="addTag()">Add Tag</button>
-        <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Enter Tag" />
-        <p ng-repeat="tag in activity.tags" ng-click="removeTag(tag)" class="tag">{{ tag }}</p>
-      </div>
+      <label class="activityLabel" for="activityLinks">Links:</label>
+      <textarea class="activityData activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com"></textarea>
+    </section>
+    <section class="activityTags col-md-offset-1 col-md-3">
+      <label class="activityLabel" for="activityTag">Tags:</label>
+      <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Enter Tag" />
+      <button type="button" ng-click="addTag()">Add Tag</button>
+      <p ng-repeat="tag in activity.tags" ng-click="removeTag(tag)" class="tag">{{ tag }}</p>
     </section>
   </section>
 
-  <input type="submit" ng-disabled="ActivityForm.$invalid" value="Save"></input>
+  <section class="activitySubmit row">
+    <input class="col-md-offset-3 col-md-6" type="submit" ng-disabled="ActivityForm.$invalid" value="Save"></input>
+  </section>
 </form>

@@ -4,15 +4,12 @@
 }
 .activity .activityData {
   margin-bottom: 0.5em;
-  display: inline-block;
 }
 .activity input[type="submit"] {
   color: #ffffff;
   background-color: #2571f5;
   border-radius: 0.5em;
   font-size: 3em;
-  display: block;
-  margin: auto;
 }
 .activity input[type="submit"]:hover {
   background-color: #0a57dd;
@@ -22,55 +19,34 @@
 }
 .activity .activityLabel {
   font-size: 1.5em;
-  width: 30%;
-  display: inline-block;
-}
-.activity section {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  width: 100%;
 }
 .activity section.activityHeader {
-  font-size: 1.3em;
-  height: 9em;
+  font-size: 1.9em;
+}
+.activity section.activityHeader .activityLabel {
+  display: block;
+  margin-bottom: 0;
 }
 .activity section.activityHeader .activityData {
-  width: 60%;
-}
-.activity section.activityHeader img,
-.activity section.activityHeader div {
-  float: left;
-}
-.activity section.activityHeader div {
-  margin-top: 1.2em;
+  width: 80%;
 }
 .activity section.activityHeader img {
   height: 8em;
-  margin-right: 1em;
-}
-.activity section.activityBody {
-  height: 32em;
 }
 .activity section.activityBody .activityData {
   display: block;
-  width: 100%;
   height: 4em;
   font-size: 2em;
+  width: 100%;
 }
-.activity section.activityBody div.activityMain {
-  width: 60%;
-  float: left;
-}
-.activity section.activityBody div.activityTags {
-  float: right;
-  width: 30%;
-}
-.activity section.activityBody div.activityTags button {
+.activity section.activityBody section.activityTags button {
   width: 100%;
   height: 3em;
+  display: block;
 }
-.activity section.activityBody div.activityTags .tag,
-.activity section.activityBody div.activityTags input {
+.activity section.activityBody section.activityTags .tag,
+.activity section.activityBody section.activityTags input {
+  width: 100%;
   border: solid;
   border-radius: 0.5em;
   margin-top: 0.5em;
@@ -82,12 +58,12 @@
   border-color: #0d61f4;
   background-color: #3d81f6;
 }
-.activity section.activityBody div.activityTags .tag {
+.activity section.activityBody section.activityTags .tag {
   border-color: #0a57dd;
   background-color: #2571f5;
   color: #ffffff;
 }
-.activity section.activityBody div.activityTags .tag:nth-child(even) {
+.activity section.activityBody section.activityTags .tag:nth-child(even) {
   border: solid #dd900a;
   background-color: #f5a925;
   color: #000000;
@@ -142,7 +118,6 @@ nav.navbar ul.nav li.alternate a:hover {
   background-color: #dd900a;
   border-color: #dd900a;
 }
-/* ACTIVITY LIST/BROWSE */
 section.activityBrowseHeader {
   padding-left: 1em;
   margin-top: 2.5em;
@@ -160,15 +135,6 @@ section.activityBrowseMain ul li {
   width: 100%;
   margin-top: 1em;
   padding: 0;
-  /*&:nth-child(even) a {
-        border-color:@orange;
-
-        &:hover {
-          background-color:@orange;
-          border-color: @darkOrange;
-          color:@dark;
-        }
-      }*/
 }
 section.activityBrowseMain ul li a {
   padding: 0.5em;
@@ -184,10 +150,17 @@ section.activityBrowseMain ul li a:hover {
   border-color: #0a57dd;
   color: #ffffff;
 }
+section.activityBrowseMain ul li:nth-child(even) a {
+  border-color: #f5a925;
+}
+section.activityBrowseMain ul li:nth-child(even) a:hover {
+  background-color: #f5a925;
+  border-color: #dd900a;
+  color: #000000;
+}
 input[type="search"] {
   border-radius: 0.5em;
 }
-/* GENERAL */
 button {
   border-radius: 0.5em;
 }

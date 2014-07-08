@@ -19,10 +19,7 @@
   margin-top: 4em;
 
   .activityData {
-
     margin-bottom:0.5em;
-    display:inline-block;
-
   }
 
   input[type="submit"] {
@@ -30,8 +27,6 @@
     background-color:@blue;
     border-radius:@borderRadius;
     font-size:3em;
-    display:block;
-    margin:auto;
     &:hover {
       background-color:@darkBlue;
     }
@@ -42,88 +37,74 @@
 
   .activityLabel {
     font-size: 1.5em;
-    width:30%;
-    display:inline-block;
   }
 
   section {
-    padding: 0.5em;
-    margin-bottom: 1em;
-    width:100%;
-    
-    &.activityHeader {
-      font-size:1.3em;
-      height:9em;
-      .activityData {
-        width:60%;
-      }
-      img, div {
-        float:left;
-      }
-      div {
-        margin-top: 1.2em;
-      }
 
+    &.activityHeader {
+      font-size:1.9em;
+      .activityLabel {
+        display:block;
+        margin-bottom:0;
+      }
+      .activityData {
+        width:80%;
+      }
       img {
         height:8em;
-        margin-right:1em;
       }
-
     }
-
+    
     &.activityBody {
-      height:32em;
       .activityData {
         display:block;
-        width:100%;
         height:4em;
         font-size:2em;
+        width:100%;
       }
-      div {
-        &.activityMain {
-          width:60%;
-          float:left;
+      
+      
+      section.activityTags {
+        button {
+          width:100%;
+          height:3em;
+          display:block;
         }
-        &.activityTags {
-          float:right;
-          width:30%;
 
-          button {
-            width:100%;
-            height:3em;
-          }
-
-          .tag, input {
-            border:solid;
-            border-radius: @borderRadius;
-            margin-top:0.5em;
-            height:2em;
-            padding-top:0.2em;
-            font-weight:bold;
-            text-align: center;
-            font-size:2.5em;
-            border-color:lighten(@darkBlue,5%);
-            background-color: lighten(@blue,5%);
-          }
-          
-          .tag {
-            border-color:@darkBlue;
-            background-color: @blue;
-            color: @light;
-            &:nth-child(even) {
-              border:solid @darkOrange;
-              background-color: @orange;
-              color:@dark;
-            }
+        .tag, input {
+          width:100%;
+          border:solid;
+          border-radius: @borderRadius;
+          margin-top:0.5em;
+          height:2em;
+          padding-top:0.2em;
+          font-weight:bold;
+          text-align: center;
+          font-size:2.5em;
+          border-color:lighten(@darkBlue,5%);
+          background-color: lighten(@blue,5%);
+        }
+        
+        .tag {
+          border-color:@darkBlue;
+          background-color: @blue;
+          color: @light;
+          &:nth-child(even) {
+            border:solid @darkOrange;
+            background-color: @orange;
+            color:@dark;
           }
         }
       }
-
+      
+      
     }
 
   }
 
 }
+
+
 
 /* LINKS, LOGO, NAV BAR */
 
@@ -199,7 +180,9 @@ nav.navbar {
   }  
 }
 
-/* ACTIVITY LIST/BROWSE */
+
+// ACTIVITY LIST/BROWSE
+
 
 section.activityBrowseHeader {
   padding-left:1em;
@@ -233,7 +216,7 @@ section.activityBrowseMain {
         }
 
       }
-      /*&:nth-child(even) a {
+      &:nth-child(even) a {
         border-color:@orange;
 
         &:hover {
@@ -241,7 +224,7 @@ section.activityBrowseMain {
           border-color: @darkOrange;
           color:@dark;
         }
-      }*/
+      }
     }
   }
 }
@@ -250,7 +233,9 @@ input[type="search"] {
   border-radius: @borderRadius;
 }
 
-/* GENERAL */
+
+// GENERAL
+
 
 button {
   border-radius: @borderRadius;

@@ -30,8 +30,13 @@ router.route('/activity/:activity_id')
         return;
       }
 
-      //Else update activity name
+      //Update activity
       activity.name = req.body.name;
+      activity.organization = req.body.organization;
+      activity.description = req.body.description;
+      activity.location = req.body.location;
+      activity.cost = req.body.cost;
+      activity.links = req.body.links;
 
       //Save activity
       activity.save(function(err) {
@@ -87,6 +92,11 @@ router.route('/activities')
     //Create activity
     var activity = new Activity();
     activity.name = req.body.name;
+    activity.organization = req.body.organization;
+    activity.description = req.body.description;
+    activity.location = req.body.location;
+    activity.cost = req.body.cost;
+    activity.links = req.body.links;
 
     //Save activity
     activity.save(function(err, activity) {

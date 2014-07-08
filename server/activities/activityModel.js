@@ -7,9 +7,7 @@ var ActivitySchema = new Schema({
   description: String,
   location: String,
   cost: String,
-  start_date: String,
-  end_date: String,
-  how_to_sign_up: String,
+  links: String,
 
   created_at: { type: Date },
   updated_at: { type: Date }

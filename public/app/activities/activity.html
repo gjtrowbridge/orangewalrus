@@ -2,11 +2,8 @@
   <section class="activityHeader">
     <img src="./assets/ow_bg.png" alt="Activity Image" />
     <div class="activitySummary">
-      <dt class="activityLabel">Name:</dt>
-      <dd class="activityData activityName">{{ activity.name }}</dd>
-
-      <dt class="activityLabel">Organization:</dt>
-      <dd class="activityData activityOrganization">{{ activity.organization }}</dd>
+      <h1 class="activityData activityName">{{ activity.name }}</h1>
+      <dd class="activityData activityOrganization">{{ activity.organization }}</h2>
     </div>
   </section>
 
@@ -17,7 +14,7 @@
       <li role="tab"><a>User Ratings</a></li>
     </ul>
     <section class="activityMain">
-      <div class="activityMain">
+      <dl class="activityMain">
         <dt class="activityLabel">Description:</dt>
         <dd class="activityData activityDescription">{{ activity.description }}</dd>
 
@@ -29,9 +26,9 @@
 
         <dt class="activityLabel">Links:</dt>
         <dd class="activityData activityLinks">{{ activity.links }}</dd>
-      </div>
+      </dl>
       <div class="activityTags">
-
+        <p ng-repeat="tag in activity.tags" class="tag">{{ tag }}</p>
       </div>
     </section>
   </section>

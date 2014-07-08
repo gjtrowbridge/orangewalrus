@@ -1,4 +1,4 @@
-<form class="activity" novalidate ng-submit="saveActivity()" name="ActivityForm">
+<form class="activity" novalidate ng-submit="saveActivity()" name="ActivityForm" style="border:solid 1px">
 
   <section class="activityHeader">
     <img src="./assets/ow_bg.png" alt="Activity Image" />
@@ -36,6 +36,7 @@
         <label class="activityLabel" for="activityTag">Tags:</label>
         <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Sports" />
         <button type="button" ng-click="addTag()">Add Tag</button>
+        <p ng-repeat="tag in activity.tags" ng-click="removeTag(tag)" class="tag">{{ tag }}</p>
       </div>
     </section>
   </section>

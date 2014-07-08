@@ -52,6 +52,10 @@ angular.module('orangeWalrus.activities', [])
     $scope.activity = {};
   }
 
+  if ($scope.activity.tags === undefined) {
+    $scope.activity.tags = [];
+  }
+
   $scope.saveActivity = function() {
     if ($scope.edit) {
       Activities.updateActivity($scope.activity).then(function(response) {
@@ -71,8 +75,18 @@ angular.module('orangeWalrus.activities', [])
   };
 
   $scope.addTag = function() {
-    console.log('hi');
+    if ($scope.tag !== '' && $scope.activity.tags.indexOf($scope.tag) === -1) {
+      $scope.activity.tags.push($scope.tag);
+    }
+    $scope.tag = '';
   };
+
+  $scope.removeTag = function(tag) {
+    var i = $scope.activity.tags.indexOf(tag);
+    if (i >= 0) {
+      $scope.activity.tags.splice(i,1);
+    }
+  }
 })
 
 

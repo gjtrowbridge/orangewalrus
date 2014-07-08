@@ -7,13 +7,13 @@
     </div>
   </section>
 
-  <section class="activityBody">
+  <section class="activityBody row">
     <ul class="nav nav-tabs" role="tablist">
       <li class="active" role="tab"><a>Basics</a></li>
       <li class="alternate" role="tab"><a>More Info</a></li>
       <li role="tab"><a>User Ratings</a></li>
     </ul>
-    <section class="activityMain">
+    <section class="activityMain col-md-6">
       <dl class="activityMain">
         <dt class="activityLabel">Description:</dt>
         <dd class="activityData activityDescription">{{ activity.description }}</dd>
@@ -24,10 +24,13 @@
         <dt class="activityLabel">Cost:</dt>
         <dd class="activityData activityCost">{{ activity.cost }}</dd>
 
+        <dt class="activityLabel">Schedule:</dt>
+        <dd class="activityData activitySchedule">{{ activity.schedule }}</dd>
+
         <dt class="activityLabel">Links:</dt>
         <dd class="activityData activityLinks">{{ activity.links }}</dd>
       </dl>
-      <div class="activityTags">
+      <div class="activityTags col-md-6">
         <p class="activityLabel" for="activityTag">Tags:</p>
         <p ng-repeat="tag in activity.tags" class="tag">{{ tag }}</p>
       </div>

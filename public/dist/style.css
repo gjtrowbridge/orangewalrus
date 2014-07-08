@@ -160,6 +160,15 @@ section.activityBrowseMain ul li {
   width: 100%;
   margin-top: 1em;
   padding: 0;
+  /*&:nth-child(even) a {
+        border-color:@orange;
+
+        &:hover {
+          background-color:@orange;
+          border-color: @darkOrange;
+          color:@dark;
+        }
+      }*/
 }
 section.activityBrowseMain ul li a {
   padding: 0.5em;
@@ -174,13 +183,6 @@ section.activityBrowseMain ul li a:hover {
   background-color: #2571f5;
   border-color: #0a57dd;
   color: #ffffff;
-}
-section.activityBrowseMain ul li a:nth-child(even) {
-  border-color: #f5a925;
-}
-section.activityBrowseMain ul li a:nth-child(even):hover {
-  background-color: #f5a925;
-  border-color: #dd900a;
 }
 input[type="search"] {
   border-radius: 0.5em;

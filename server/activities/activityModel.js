@@ -8,6 +8,7 @@ var ActivitySchema = new Schema({
   location: String,
   cost: String,
   links: String,
+  schedule: String,
   tags: {
     type: Array,
     'default': []

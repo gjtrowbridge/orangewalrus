@@ -20,12 +20,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('editActivity', {
       url: "/activity/:activity_id/edit",
-      templateUrl: "/app/activities/newActivity.html",
+      templateUrl: "/app/activities/activityForm.html",
       controller: 'EditActivityController'
     })
     .state('newActivity', {
       url: '/activities/new',
-      templateUrl: '/app/activities/newActivity.html',
+      templateUrl: '/app/activities/activityForm.html',
       controller: 'NewActivityController'
     });
 

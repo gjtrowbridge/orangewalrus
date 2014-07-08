@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     watch: {
       build: {
         files: [
-          'public/app/*',
+          'public/app/**/*',
           'public/styles/*'
         ],
         tasks: ['build']

@@ -49,7 +49,10 @@ router.route('/activity/:activity_id')
         }
 
         //Return message on success
-        res.json({ message: 'Activity updated: ' + activity._id });
+        res.json({ 
+          message: 'Activity updated: ' + activity._id,
+          activity_id: activity._id
+        });
       });
     });
   })
@@ -109,7 +112,10 @@ router.route('/activities')
       }
 
       //Return message on success
-      res.json({ message: 'Activity created: ' + activity._id });
+      res.json({ 
+        message: 'Activity created: ' + activity._id,
+        activity_id: activity._id
+      });
     });
 
   });

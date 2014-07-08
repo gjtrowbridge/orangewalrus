@@ -40,7 +40,7 @@ angular.module('orangeWalrus.activities', [])
 })
 
 //Handles editing activities
-.controller('ActivityFormController', function($scope, $stateParams, Activities) {
+.controller('ActivityFormController', function($scope, $location, $stateParams, Activities) {
   if ($stateParams.activity_id) {
     $scope.edit = true;
     Activities.getActivity($stateParams.activity_id).then(function(response) {
@@ -56,12 +56,14 @@ angular.module('orangeWalrus.activities', [])
     if ($scope.edit) {
       Activities.updateActivity($scope.activity).then(function(response) {
         console.log('Activity updated');
+        $location.path('/activity/' + response.data.activity_id);
       }).catch(function(err) {
         console.log(err);
       });
     } else {
       Activities.addActivity($scope.activity).then(function(response) {
-        console.log('Activity added');
+        console.log('Activity updated');
+        $location.path('/activity/' + response.data.activity_id);
       }).catch(function(err) {
         console.log(err);
       });

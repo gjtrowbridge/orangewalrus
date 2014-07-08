@@ -76,7 +76,7 @@ angular.module('orangeWalrus.activities', [])
 
   $scope.addTag = function() {
     if ($scope.tag !== '' && $scope.activity.tags.indexOf($scope.tag) === -1) {
-      $scope.activity.tags.push($scope.tag);
+      $scope.activity.tags.unshift($scope.tag);
     }
     $scope.tag = '';
   };

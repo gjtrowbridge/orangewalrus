@@ -21,21 +21,21 @@
     <section class="activityMain">
       <div class="activityMain">
         <label class="activityLabel" for="activityDescription">Description:</label>
-        <input class="activityData activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
+        <textarea class="activityData activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
 
         <label class="activityLabel" for="activityLocation">Location:</label>
-        <input class="activityData activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
+        <textarea class="activityData activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
 
         <label class="activityLabel" for="activityCost">Cost:</label>
-        <input class="activityData activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
+        <textarea class="activityData activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
 
         <label class="activityLabel" for="activityLinks">Links:</label>
-        <input class="activityData activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
+        <textarea class="activityData activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
       </div>
       <div class="activityTags">
         <label class="activityLabel" for="activityTag">Tags:</label>
-        <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Sports" />
         <button type="button" ng-click="addTag()">Add Tag</button>
+        <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Enter Tag" />
         <p ng-repeat="tag in activity.tags" ng-click="removeTag(tag)" class="tag">{{ tag }}</p>
       </div>
     </section>

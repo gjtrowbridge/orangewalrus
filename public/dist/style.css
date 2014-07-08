@@ -133,7 +133,7 @@ nav.navbar ul.nav li.alternate a:hover {
   background-color: #dd900a;
   border-color: #dd900a;
 }
-/* ACTIVITY BROWSE */
+/* ACTIVITY LIST/BROWSE */
 section.activityBrowseHeader {
   padding-left: 1em;
   margin-top: 2.5em;
@@ -143,12 +143,38 @@ section.activityBrowseHeader button {
   margin-top: 1.6em;
   font-size: 1.3em;
 }
+section.activityBrowseMain ul {
+  margin: 2em 0 0 1em;
+  padding: 0;
+}
+section.activityBrowseMain ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+section.activityBrowseMain ul li a {
+  padding: 0.5em;
+  border: solid;
+  border-color: #2571f5;
+  border-radius: 0.5em;
+  color: #000000;
+  display: block;
+  width: 100%;
+}
+section.activityBrowseMain ul li a:hover {
+  background-color: #2571f5;
+  border-color: #0a57dd;
+  color: #ffffff;
+}
 input[type="search"] {
   border-radius: 0.5em;
 }
 /* GENERAL */
 button {
   border-radius: 0.5em;
+}
+ul {
+  list-style-type: none;
 }
 a.alternate {
   border-color: #f5a925;

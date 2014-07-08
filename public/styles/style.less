@@ -190,7 +190,7 @@ nav.navbar {
   }  
 }
 
-/* ACTIVITY BROWSE */
+/* ACTIVITY LIST/BROWSE */
 
 section.activityBrowseHeader {
   padding-left:1em;
@@ -198,6 +198,37 @@ section.activityBrowseHeader {
   input, button {
     margin-top: 1.6em;
     font-size:1.3em;
+  }
+}
+
+section.activityBrowseMain {
+  ul {
+    margin:2em 0 0 1em;
+    padding:0;
+    li {
+      width:100%;
+      margin:0;
+      padding:0;
+      a {
+        padding:0.5em;
+        border:solid;
+        border-color:@blue;
+        border-radius: @borderRadius;
+        color:@dark;
+        display:block;
+        width: 100%;
+        &:hover {
+          background-color:@blue;
+          border-color:@darkBlue;
+          color:@light;
+        }
+
+        &:nth-child(even) {
+          @color:@dark;
+        }
+      }
+
+    }
   }
 }
 
@@ -209,6 +240,10 @@ input[type="search"] {
 
 button {
   border-radius: @borderRadius;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a.alternate {

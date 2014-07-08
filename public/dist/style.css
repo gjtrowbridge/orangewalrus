@@ -144,12 +144,12 @@ section.activityBrowseHeader button {
   font-size: 1.3em;
 }
 section.activityBrowseMain ul {
-  margin: 2em 0 0 1em;
+  margin: 2em 0 0 2em;
   padding: 0;
 }
 section.activityBrowseMain ul li {
   width: 100%;
-  margin: 0;
+  margin-top: 1em;
   padding: 0;
 }
 section.activityBrowseMain ul li a {
@@ -165,6 +165,13 @@ section.activityBrowseMain ul li a:hover {
   background-color: #2571f5;
   border-color: #0a57dd;
   color: #ffffff;
+}
+section.activityBrowseMain ul li a:nth-child(even) {
+  border-color: #f5a925;
+}
+section.activityBrowseMain ul li a:nth-child(even):hover {
+  background-color: #f5a925;
+  border-color: #dd900a;
 }
 input[type="search"] {
   border-radius: 0.5em;

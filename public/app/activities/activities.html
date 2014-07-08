@@ -1,11 +1,11 @@
 <section class="activityBrowseHeader row">
   <h1 class="col-md-5">Browsing Activities</h1>
-  <input class="activityBrowseFilter col-md-3" ng-model="search" type="search" placeholder="Filter Results" />
+  <input class="activityBrowseFilter col-md-3" ng-model="searchText" type="search" placeholder="Filter Results" />
   <button class="col-md-offset-1 col-md-2">Adjust Search</button>
 </section>
 <section class="activityBrowseMain">
   <ul>
-    <li class="activityListItem row" ng-repeat="activity in data.activities">
+    <li class="activityListItem row" ng-repeat="activity in data.activities | filter:searchText">
       <ng-activity-link>
     </li>
   </ul>

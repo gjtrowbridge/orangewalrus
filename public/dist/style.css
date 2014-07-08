@@ -1,10 +1,47 @@
-span.logo-first {
+a:hover {
+  color: #0a57dd;
+  text-decoration: none;
+}
+a:hover .alternate {
+  color: #dd900a;
+}
+a.logo {
+  font-size: 3.5em;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+}
+a.logo:hover span:first-child {
+  color: #dd900a;
+}
+a.logo span:first-child {
   color: #f5a925;
 }
+nav.navbar ul.nav {
+  font-size: 1.5em;
+}
+nav.navbar ul.nav li {
+  border: #000000 solid 0.1em;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  color: inherit;
+}
+nav.navbar ul.nav li a {
+  background-color: #2571f5;
+  color: #ffffff;
+}
+nav.navbar ul.nav li a:hover {
+  background-color: #0a57dd;
+}
+nav.navbar ul.nav li.alternate a {
+  background-color: #f5a925;
+  color: #000000;
+}
+nav.navbar ul.nav li.alternate a:hover {
+  background-color: #dd900a;
+}
 body {
-  color: #2571f5;
-  /*background-image: url('../assets/ow_bg.png');
-  background-repeat: no-repeat;
-  background-size:100px;
-  background-position: center;*/
+  color: black;
+  font-family: "Comic Sans MS";
+  /*font-family: "Brush Script MT", cursive, sans-serif;*/
+  margin-top: 3em;
 }

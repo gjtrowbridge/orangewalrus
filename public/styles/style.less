@@ -1,15 +1,80 @@
+@light: white;
+@dark: black;
 
 @orange: #F5A925;
-@blue: #2571F5;
+@dark_orange: darken(@orange, 10%);
 
-span.logo-first {
-  color:@orange;
+@blue: #2571F5;
+@dark_blue: darken(@blue, 10%);
+
+
+a {
+  &:hover {
+    color:@dark_blue;
+    text-decoration: none;
+
+    .alternate {
+      color:@dark_orange;
+    }
+  };
+
+  &.logo {
+    font-size: 3.5em;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+
+    &:hover {
+      span:first-child {
+        color:@dark_orange;
+      }
+    }
+
+    span:first-child {
+      color:@orange;
+    }
+  }
+
+}
+
+
+nav.navbar {
+
+  ul.nav {
+
+    font-size: 1.5em;
+
+    li {
+      border: @dark solid 0.1em;
+      border-radius: 0.5em;
+      margin-left: 0.5em;
+      color:inherit;
+
+      a {
+        background-color:@blue;
+        color:@light;
+
+        &:hover {
+          background-color:@dark_blue;
+        }
+      }
+
+      &.alternate {
+        a {
+          background-color:@orange;
+          color:@dark;
+
+          &:hover {
+            background-color:@dark_orange;
+          }
+        }
+      }
+    }
+  }  
 }
 
 body {
-  color:@blue;
-  /*background-image: url('../assets/ow_bg.png');
-  background-repeat: no-repeat;
-  background-size:100px;
-  background-position: center;*/
+  color:black;
+  font-family: "Comic Sans MS";
+  /*font-family: "Brush Script MT", cursive, sans-serif;*/
+  margin-top:3em;
 }

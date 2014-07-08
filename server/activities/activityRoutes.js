@@ -38,6 +38,7 @@ router.route('/activity/:activity_id')
       activity.cost = req.body.cost;
       activity.links = req.body.links;
       activity.tags = req.body.tags;
+      activity.schedule = req.body.schedule;
 
       //Save activity
       activity.save(function(err) {
@@ -102,6 +103,7 @@ router.route('/activities')
     activity.cost = req.body.cost;
     activity.links = req.body.links;
     activity.tags = req.body.tags;
+    activity.schedule = req.body.schedule;
 
     //Save activity
     activity.save(function(err, activity) {

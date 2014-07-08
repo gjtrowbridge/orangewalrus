@@ -5,17 +5,22 @@
 .activity .activityData {
   margin-bottom: 0.5em;
 }
-.activity input[type="submit"] {
+.activity .activityButton {
+  display: inline;
+  text-align: center;
   color: #ffffff;
   background-color: #2571f5;
   border-radius: 0.5em;
   font-size: 3em;
 }
-.activity input[type="submit"]:hover {
+.activity .activityButton:hover {
   background-color: #0a57dd;
 }
-.activity input[type="submit"]:disabled {
+.activity .activityButton:disabled {
   background-color: #808080;
+}
+.activity .activityButton .owAlternate {
+  background-color: #f5a925;
 }
 .activity .activityLabel {
   font-size: 1.5em;
@@ -31,13 +36,16 @@
   width: 80%;
 }
 .activity section.activityHeader img {
-  height: 8em;
+  width: 10em;
 }
 .activity section.activityBody .activityData {
   display: block;
   height: 4em;
   font-size: 2em;
   width: 100%;
+}
+.activity section.activityBody .activityLabel {
+  text-decoration: underline;
 }
 .activity section.activityBody section.activityTags button {
   width: 100%;
@@ -73,7 +81,7 @@ a:hover {
   color: #0a57dd;
   text-decoration: none;
 }
-a:hover .alternate {
+a:hover .owAlternate {
   color: #dd900a;
 }
 a.logo {
@@ -81,10 +89,10 @@ a.logo {
   font-family: "Comic Sans MS";
   font-weight: bold;
 }
-a.logo:hover span.alternate {
+a.logo:hover span.owAlternate {
   color: #dd900a;
 }
-a.logo span.alternate {
+a.logo span.owAlternate {
   color: #f5a925;
 }
 img.logo {
@@ -109,12 +117,12 @@ nav.navbar ul.nav li a:hover {
   background-color: #0a57dd;
   border-color: #0a57dd;
 }
-nav.navbar ul.nav li.alternate a {
+nav.navbar ul.nav li.owAlternate a {
   border-color: #f5a925;
   background-color: #f5a925;
   color: #000000;
 }
-nav.navbar ul.nav li.alternate a:hover {
+nav.navbar ul.nav li.owAlternate a:hover {
   background-color: #dd900a;
   border-color: #dd900a;
 }
@@ -167,12 +175,12 @@ button {
 ul {
   list-style-type: none;
 }
-a.alternate {
+a.owAlternate {
   border-color: #f5a925;
   background-color: #f5a925;
   color: #000000;
 }
-a.alternate:hover {
+a.owAlternate:hover {
   background-color: #dd900a;
   border-color: #dd900a;
 }

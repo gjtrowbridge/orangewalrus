@@ -22,7 +22,9 @@
     margin-bottom:0.5em;
   }
 
-  input[type="submit"] {
+  .activityButton {
+    display:inline;
+    text-align:center;
     color:@light;
     background-color:@blue;
     border-radius:@borderRadius;
@@ -33,6 +35,11 @@
     &:disabled {
       background-color:@inactive;
     }
+
+    .owAlternate {
+      background-color:@orange;
+    }
+
   }
 
   .activityLabel {
@@ -51,7 +58,7 @@
         width:80%;
       }
       img {
-        height:8em;
+        width:10em;
       }
     }
     
@@ -61,6 +68,10 @@
         height:4em;
         font-size:2em;
         width:100%;
+      }
+
+      .activityLabel {
+        text-decoration: underline;
       }
       
       
@@ -96,12 +107,8 @@
           }
         }
       }
-      
-      
     }
-
   }
-
 }
 
 
@@ -113,7 +120,7 @@ a {
     color:@darkBlue;
     text-decoration: none;
 
-    .alternate {
+    .owAlternate {
       color:@darkOrange;
     }
   };
@@ -124,12 +131,12 @@ a {
     font-weight: bold;
 
     &:hover {
-      span.alternate {
+      span.owAlternate {
         color:@darkOrange;
       }
     }
 
-    span.alternate {
+    span.owAlternate {
       color:@orange;
     }
   }
@@ -164,7 +171,7 @@ nav.navbar {
         }
       }
 
-      &.alternate {
+      &.owAlternate {
         a {
           border-color:@orange;
           background-color:@orange;
@@ -236,7 +243,6 @@ input[type="search"] {
 
 // GENERAL
 
-
 button {
   border-radius: @borderRadius;
 }
@@ -245,7 +251,7 @@ ul {
   list-style-type: none;
 }
 
-a.alternate {
+a.owAlternate {
   border-color:@orange;
   background-color:@orange;
   color:@dark;

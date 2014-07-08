@@ -1,42 +1,48 @@
 <div class="activity">
-  <section class="activityHeader">
-    <img src="./assets/kickball_photo.jpg" alt="Activity Image" />
-    <div class="activitySummary">
-      <h1 class="activityData activityName">{{ activity.name }}</h1>
-      <dd class="activityData activityOrganization">{{ activity.organization }}</h2>
+  <section class="activityHeader row">
+    <div class="col-md-3">
+      <img src="./assets/kickball_photo.jpg" alt="Activity Image" />
+    </div>
+    <div class="col-md-8 activitySummary">
+      <div>
+        <h1 class="activityData activityName">{{ activity.name }}</h1>
+      </div>
+      <div>
+        <h2 class="activityData activityOrganization">{{ activity.organization }}</h2>
+      </div>
     </div>
   </section>
 
   <section class="activityBody row">
     <ul class="nav nav-tabs" role="tablist">
       <li class="active" role="tab"><a>Basics</a></li>
-      <li class="alternate" role="tab"><a>More Info</a></li>
+      <li class="owAlternate" role="tab"><a>More Info</a></li>
       <li role="tab"><a>User Ratings</a></li>
     </ul>
-    <section class="activityMain col-md-6">
-      <dl class="activityMain">
-        <dt class="activityLabel">Description:</dt>
-        <dd class="activityData activityDescription">{{ activity.description }}</dd>
+    <section class="activityMain col col-md-6">
+      <dt class="activityLabel">Description:</dt>
+      <dd class="activityData activityDescription">{{ activity.description }}</dd>
 
-        <dt class="activityLabel">Location:</dt>
-        <dd class="activityData activityLocation">{{ activity.location }}</dd>
+      <dt class="activityLabel">Location:</dt>
+      <dd class="activityData activityLocation">{{ activity.location }}</dd>
 
-        <dt class="activityLabel">Cost:</dt>
-        <dd class="activityData activityCost">{{ activity.cost }}</dd>
+      <dt class="activityLabel">Cost:</dt>
+      <dd class="activityData activityCost">{{ activity.cost }}</dd>
 
-        <dt class="activityLabel">Schedule:</dt>
-        <dd class="activityData activitySchedule">{{ activity.schedule }}</dd>
+      <dt class="activityLabel">Schedule:</dt>
+      <dd class="activityData activitySchedule">{{ activity.schedule }}</dd>
 
-        <dt class="activityLabel">Links:</dt>
-        <dd class="activityData activityLinks">{{ activity.links }}</dd>
-      </dl>
-      <div class="activityTags col-md-6">
-        <p class="activityLabel" for="activityTag">Tags:</p>
-        <p ng-repeat="tag in activity.tags" class="tag">{{ tag }}</p>
-      </div>
+      <dt class="activityLabel">Links:</dt>
+      <dd class="activityData activityLinks">{{ activity.links }}</dd>
+    </section>
+    <section class="activityTags col-md-offset-1 col-md-3">
+      <p class="activityLabel" for="activityTag">Tags:</p>
+      <p ng-repeat="tag in activity.tags" class="tag">{{ tag }}</p>
     </section>
   </section>
-</div>
 
-<a ui-sref="editActivity({ activity_id: activity._id })">Edit Activity</a>
-<button ng-click="deleteActivity()">Delete</button>
+  <section class="activityButtons row">
+    <a class="col-md-offset-2 col-md-4 activityButton" ui-sref="editActivity({ activity_id: activity._id })">Edit Activity</a>
+    <button class="owAlternate col-md-offset-1 col-md-4 activityButton" ng-click="deleteActivity()">Delete Activity</button>
+  </section>
+</form>

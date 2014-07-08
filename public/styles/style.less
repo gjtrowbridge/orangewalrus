@@ -14,33 +14,36 @@
 
 /* ACTIVITY FORM (Create, Edit) */
 
-form.activity {
+.activity {
 
   margin-top: 4em;
 
-  input {
+  .activityData {
 
     margin-bottom:0.5em;
+    display:inline-block;
 
-    &[type="submit"] {
-      color:@light;
-      background-color:@blue;
-      border-radius:@borderRadius;
-      font-size:3em;
-      display:block;
-      margin:auto;
-      &:hover {
-        background-color:@darkBlue;
-      }
-      &:disabled {
-        background-color:@inactive;
-      }
+  }
+
+  input[type="submit"] {
+    color:@light;
+    background-color:@blue;
+    border-radius:@borderRadius;
+    font-size:3em;
+    display:block;
+    margin:auto;
+    &:hover {
+      background-color:@darkBlue;
+    }
+    &:disabled {
+      background-color:@inactive;
     }
   }
 
-  label {
+  .activityLabel {
     font-size: 1.5em;
     width:30%;
+    display:inline-block;
   }
 
   section {
@@ -51,9 +54,8 @@ form.activity {
     &.activityHeader {
       font-size:1.3em;
       height:9em;
-      input {
-        width:50%;
-        display:inline;
+      .activityData {
+        width:60%;
       }
       img, div {
         float:left;
@@ -71,7 +73,7 @@ form.activity {
 
     &.activityBody {
       height:32em;
-      input {
+      .activityData {
         display:block;
         width:100%;
         height:4em;

@@ -3,11 +3,11 @@
   <section class="activityHeader">
     <img src="./assets/ow_bg.png" alt="Activity Image" />
     <div class="activitySummary">
-      <label for="activityName">Name:</label>
-      <input class="activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
+      <label class="activityLabel" for="activityName">Name:</label>
+      <input class="activityData activityName" ng-model="activity.name" id="activityName" name="name" required placeholder="Soccer 5v5" />
 
-      <label for="activityOrganization">Organization:</label>
-      <input class="activityOrganization" ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
+      <label class="activityLabel" for="activityOrganization">Organization:</label>
+      <input class="activityData activityOrganization" ng-model="activity.organization" id="activityOrganization" name="organization" placeholder="Fun Sports, LLC" />
 
     </div>
   </section>
@@ -20,21 +20,21 @@
     </ul>
     <section class="activityMain">
       <div class="activityMain">
-        <label for="activityDescription">Description:</label>
-        <input class="activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
+        <label class="activityLabel" for="activityDescription">Description:</label>
+        <input class="activityData activityDescription" ng-model="activity.description" id="activityDescription" name="description" placeholder="Recreational soccer with team bonding after!" />
 
-        <label for="activityLocation">Location:</label>
-        <input class="activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
+        <label class="activityLabel" for="activityLocation">Location:</label>
+        <input class="activityData activityLocation" ng-model="activity.location" id="activityLocation" name="location" placeholder="That One Field, 123 Sunshine Lane, San Francisco, CA" />
 
-        <label for="activityCost">Cost:</label>
-        <input class="activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
+        <label class="activityLabel" for="activityCost">Cost:</label>
+        <input class="activityData activityCost" ng-model="activity.cost" id="activityCost" name="cost" placeholder="$100/season" />
 
-        <label for="activityLinks">Links:</label>
-        <input class="activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
+        <label class="activityLabel" for="activityLinks">Links:</label>
+        <input class="activityData activityLinks" ng-model="activity.links" id="activityLinks" name="links" placeholder="www.5v5soccerinfofoundhere.com" />
       </div>
       <div class="activityTags">
-        <label for="activityTag">Tags:</label>
-        <input id="activityTag" class="activityTag" ng-model="tag" placeholder="Sports" />
+        <label class="activityLabel" for="activityTag">Tags:</label>
+        <input id="activityTag" class="activityData activityTag" ng-model="tag" placeholder="Sports" />
         <button type="button" ng-click="addTag()">Add Tag</button>
       </div>
     </section>

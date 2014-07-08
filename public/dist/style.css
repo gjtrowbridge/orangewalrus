@@ -1,11 +1,12 @@
 /* ACTIVITY FORM (Create, Edit) */
-form.activity {
+.activity {
   margin-top: 4em;
 }
-form.activity input {
+.activity .activityData {
   margin-bottom: 0.5em;
+  display: inline-block;
 }
-form.activity input[type="submit"] {
+.activity input[type="submit"] {
   color: #ffffff;
   background-color: #2571f5;
   border-radius: 0.5em;
@@ -13,53 +14,53 @@ form.activity input[type="submit"] {
   display: block;
   margin: auto;
 }
-form.activity input[type="submit"]:hover {
+.activity input[type="submit"]:hover {
   background-color: #0a57dd;
 }
-form.activity input[type="submit"]:disabled {
+.activity input[type="submit"]:disabled {
   background-color: #808080;
 }
-form.activity label {
+.activity .activityLabel {
   font-size: 1.5em;
   width: 30%;
+  display: inline-block;
 }
-form.activity section {
+.activity section {
   padding: 0.5em;
   margin-bottom: 1em;
   width: 100%;
 }
-form.activity section.activityHeader {
+.activity section.activityHeader {
   font-size: 1.3em;
   height: 9em;
 }
-form.activity section.activityHeader input {
-  width: 50%;
-  display: inline;
+.activity section.activityHeader .activityData {
+  width: 60%;
 }
-form.activity section.activityHeader img,
-form.activity section.activityHeader div {
+.activity section.activityHeader img,
+.activity section.activityHeader div {
   float: left;
 }
-form.activity section.activityHeader div {
+.activity section.activityHeader div {
   margin-top: 1.2em;
 }
-form.activity section.activityHeader img {
+.activity section.activityHeader img {
   height: 8em;
   margin-right: 1em;
 }
-form.activity section.activityBody {
+.activity section.activityBody {
   height: 32em;
 }
-form.activity section.activityBody input {
+.activity section.activityBody .activityData {
   display: block;
   width: 100%;
   height: 4em;
 }
-form.activity section.activityBody div.activityMain {
+.activity section.activityBody div.activityMain {
   width: 60%;
   float: left;
 }
-form.activity section.activityBody div.activityTags {
+.activity section.activityBody div.activityTags {
   float: right;
   width: 30%;
 }

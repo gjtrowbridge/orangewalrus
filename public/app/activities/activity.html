@@ -1,18 +1,41 @@
-<h1 ng-click="clicked('name')">{{activity.name}}</h1>
-<h2>{{activity.organization}}</h2>
-<dl>
-    <dt ng-click="clicked('yo')">Description</dt>
-    <dd>{{ activity.description }}</dd>
-    
-    <dt>Location</dt>
-    <dd>{{ activity.location }}</dd>
+<div class="activity">
+  <section class="activityHeader">
+    <img src="./assets/ow_bg.png" alt="Activity Image" />
+    <div class="activitySummary">
+      <dt class="activityLabel">Name:</dt>
+      <dd class="activityData activityName">{{ activity.name }}</dd>
 
-    <dt>Cost</dt>
-    <dd>{{ activity.cost }}</dd>
+      <dt class="activityLabel">Organization:</dt>
+      <dd class="activityData activityOrganization">{{ activity.organization }}</dd>
+    </div>
+  </section>
 
-    <dt>Links</dt>
-    <dd>{{ activity.links }}</dd>
-</dl>
+  <section class="activityBody">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active" role="tab"><a>Basics</a></li>
+      <li class="alternate" role="tab"><a>More Info</a></li>
+      <li role="tab"><a>User Ratings</a></li>
+    </ul>
+    <section class="activityMain">
+      <div class="activityMain">
+        <dt class="activityLabel">Description:</dt>
+        <dd class="activityData activityDescription">{{ activity.description }}</dd>
+
+        <dt class="activityLabel">Location:</dt>
+        <dd class="activityData activityLocation">{{ activity.location }}</dd>
+
+        <dt class="activityLabel">Cost:</dt>
+        <dd class="activityData activityCost">{{ activity.cost }}</dd>
+
+        <dt class="activityLabel">Links:</dt>
+        <dd class="activityData activityLinks">{{ activity.links }}</dd>
+      </div>
+      <div class="activityTags">
+
+      </div>
+    </section>
+  </section>
+</div>
 
 <a ui-sref="editActivity({ activity_id: activity._id })">Edit Activity</a>
 <button ng-click="deleteActivity()">Delete</button>

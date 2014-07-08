@@ -8,7 +8,10 @@ var ActivitySchema = new Schema({
   location: String,
   cost: String,
   links: String,
-  tags: [String],
+  tags: {
+    type: Array,
+    'default': []
+  },
 
   created_at: { type: Date },
   updated_at: { type: Date }

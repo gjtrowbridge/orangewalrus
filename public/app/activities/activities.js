@@ -45,16 +45,17 @@ angular.module('orangeWalrus.activities', [])
     $scope.edit = true;
     Activities.getActivity($stateParams.activity_id).then(function(response) {
       $scope.activity = response.data;
+      if ($scope.activity.tags === undefined) {
+        $scope.activity.tags = [];
+      }
     }).catch(function(err) {
       console.log(err);
     });
   } else {
     $scope.activity = {};
-  }
-
-  if ($scope.activity.tags === undefined) {
     $scope.activity.tags = [];
   }
+  
 
   $scope.saveActivity = function() {
     if ($scope.edit) {

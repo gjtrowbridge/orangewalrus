@@ -40,6 +40,9 @@ form.activity section.activityHeader img,
 form.activity section.activityHeader div {
   float: left;
 }
+form.activity section.activityHeader div {
+  margin-top: 1.2em;
+}
 form.activity section.activityHeader img {
   height: 8em;
   margin-right: 1em;

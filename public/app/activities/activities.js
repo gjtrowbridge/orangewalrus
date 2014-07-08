@@ -39,32 +39,33 @@ angular.module('orangeWalrus.activities', [])
   
 })
 
-//Handles adding activities
-.controller('NewActivityController', function($scope, Activities) {
-  $scope.activity = {};
-  $scope.saveActivity = function() {
-    Activities.addActivity($scope.activity).then(function(response) {
-      console.log('Activity added');
-    }).catch(function(err) {
-      console.log(err);
-    });
-  }
-})
-
 //Handles editing activities
-.controller('EditActivityController', function($scope, $stateParams, Activities) {
-  Activities.getActivity($stateParams.activity_id).then(function(response) {
-    $scope.activity = response.data;
-  }).catch(function(err) {
-    console.log(err);
-  });
-
-  $scope.saveActivity = function() {
-    Activities.updateActivity($scope.activity).then(function(response) {
-      console.log('Activity updated');
+.controller('ActivityFormController', function($scope, $stateParams, Activities) {
+  if ($stateParams.activity_id) {
+    $scope.edit = true;
+    Activities.getActivity($stateParams.activity_id).then(function(response) {
+      $scope.activity = response.data;
     }).catch(function(err) {
       console.log(err);
     });
+  } else {
+    $scope.activity = {};
+  }
+
+  $scope.saveActivity = function() {
+    if ($scope.edit) {
+      Activities.updateActivity($scope.activity).then(function(response) {
+        console.log('Activity updated');
+      }).catch(function(err) {
+        console.log(err);
+      });
+    } else {
+      Activities.addActivity($scope.activity).then(function(response) {
+        console.log('Activity added');
+      }).catch(function(err) {
+        console.log(err);
+      });
+    }
   }
 })
 

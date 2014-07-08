@@ -21,12 +21,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('editActivity', {
       url: "/activity/:activity_id/edit",
       templateUrl: "/app/activities/activityForm.html",
-      controller: 'EditActivityController'
+      controller: 'ActivityFormController'
     })
     .state('newActivity', {
       url: '/activities/new',
       templateUrl: '/app/activities/activityForm.html',
-      controller: 'NewActivityController'
+      controller: 'ActivityFormController'
     });
 
 });

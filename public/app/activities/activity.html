@@ -1,3 +1,18 @@
-<h1 ng-click="clicked('name')" class="nameOwActivity">{{ activity.name }}</h1>
+<h1>{{activity.name}}</h1>
+<h2>{{activity.organization}}</h2>
+<dl>
+    <dt>Description</dt>
+    <dd>{{ activity.description }}</dd>
+    
+    <dt>Location</dt>
+    <dd>{{ activity.location }}</dd>
+
+    <dt>Cost</dt>
+    <dd>{{ activity.cost }}</dd>
+
+    <dt>Links</dt>
+    <dd>{{ activity.links }}</dd>
+</dl>
+
 <a ui-sref="editActivity({ activity_id: activity._id })">Edit Activity</a>
 <button ng-click="deleteActivity()">Delete</button>

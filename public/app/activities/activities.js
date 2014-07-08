@@ -42,9 +42,26 @@ angular.module('orangeWalrus.activities', [])
 //Handles adding activities
 .controller('NewActivityController', function($scope, Activities) {
   $scope.activity = {};
-  $scope.addActivity = function() {
+  $scope.saveActivity = function() {
     Activities.addActivity($scope.activity).then(function(response) {
       console.log('Activity added');
+    }).catch(function(err) {
+      console.log(err);
+    });
+  }
+})
+
+//Handles editing activities
+.controller('EditActivityController', function($scope, $stateParams, Activities) {
+  Activities.getActivity($stateParams.activity_id).then(function(response) {
+    $scope.activity = response.data;
+  }).catch(function(err) {
+    console.log(err);
+  });
+
+  $scope.saveActivity = function() {
+    Activities.updateActivity($scope.activity).then(function(response) {
+      console.log('Activity updated');
     }).catch(function(err) {
       console.log(err);
     });
@@ -57,4 +74,4 @@ angular.module('orangeWalrus.activities', [])
     restrict: 'E',
     templateUrl: '/app/activities/activityLink.html'
   }
-})
+});

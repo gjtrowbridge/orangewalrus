@@ -3,6 +3,14 @@ var Schema = mongoose.Schema;
 
 var ActivitySchema = new Schema({
   name: String,
+  organization: String,
+  description: String,
+  location: String,
+  cost: String,
+  start_date: String,
+  end_date: String,
+  how_to_sign_up: String,
+
   created_at: { type: Date },
   updated_at: { type: Date }
 });

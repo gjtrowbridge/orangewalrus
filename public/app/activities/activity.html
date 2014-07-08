@@ -1,7 +1,7 @@
-<h1>{{activity.name}}</h1>
+<h1 ng-click="clicked('name')">{{activity.name}}</h1>
 <h2>{{activity.organization}}</h2>
 <dl>
-    <dt>Description</dt>
+    <dt ng-click="clicked('yo')">Description</dt>
     <dd>{{ activity.description }}</dd>
     
     <dt>Location</dt>

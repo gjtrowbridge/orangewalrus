@@ -31,11 +31,11 @@ angular.module('orangeWalrus.activities', [])
     }).catch(function(err) {
       console.log(err);
     });
-  }
+  };
 
   $scope.clicked = function(attr) {
     console.log(attr);
-  }
+  };
   
 })
 
@@ -66,7 +66,11 @@ angular.module('orangeWalrus.activities', [])
         console.log(err);
       });
     }
-  }
+  };
+
+  $scope.addTag = function() {
+    console.log('hi');
+  };
 })
 
 

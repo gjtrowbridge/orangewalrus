@@ -11,7 +11,7 @@ var mongooseConnectionURL = process.env.CUSTOMCONNSTR_MONGOLAB_URI || 'mongodb:/
 mongoose.connect(mongooseConnectionURL)
 
 //Defines port for azure deploy (and local deploy)
-var port = process.env.port || 8080;
+var port = process.env.port || 5000;
 
 //Parses incoming form data onto request.body
 app.use(bodyParser.urlencoded({ extended: true }));
